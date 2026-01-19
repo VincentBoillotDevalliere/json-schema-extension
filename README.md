@@ -1,6 +1,6 @@
 # JSON Schema Helper
 
-<img src="https://raw.githubusercontent.com/VincentBoillotDevalliere/json-schema-extension/main/assets/icon.png" alt="JSON Schema Extension Logo" width="128" height="128">
+<img src="https://raw.githubusercontent.com/VincentBoillotDevalliere/json-schema-extension/main/assets/image.png" alt="JSON Schema Extension Logo" width="128" height="128">
 
 A lightweight VS Code extension that validates JSON/JSONC files **against a local JSON Schema** and shows diagnostics (warnings) directly in the editor.
 
