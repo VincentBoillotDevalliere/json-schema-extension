@@ -169,6 +169,14 @@ Not currently validated:
 
 ---
 
+## Buy Me a Coffee
+If you appreciate the extension and would like to support its development, feel free to [buy me a coffee](https://buymeacoffee.com/vincentboillotdevalliere)! Your support helps keep the project alive and improving. ☕💖
+
+
 ## License
 
-MIT
+This extension is licensed under the [MIT License](LICENSE).
+
+## Credits
+
+Created by [Vincent Devalliere](https://github.com/VincentBoillotDevalliere)
