@@ -1,0 +1,73 @@
+{
+  "name": "json-schema-helper",
+  "displayName": "JSON Schema Helper",
+  "description": "Report JSON Schema mismatches in the Problems panel for JSON/JSONC files.",
+  "version": "0.0.1",
+  "publisher": "VincentDevalliere",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonc"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "JSON Schema Helper",
+      "properties": {
+        "jsonSchemaHelper.schemaMappings": {
+          "type": "array",
+          "default": [],
+          "description": "Map JSON file globs to schema files.",
+          "items": {
+            "type": "object",
+            "required": [
+              "pattern",
+              "schemaPath"
+            ],
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "description": "Glob pattern matched against the workspace-relative file path."
+              },
+              "schemaPath": {
+                "type": "string",
+                "description": "Path to the schema file (workspace-relative, absolute, or file URI)."
+              }
+            }
+          }
+        },
+        "jsonSchemaHelper.showUnknownProperties": {
+          "type": "boolean",
+          "default": true,
+          "description": "Report diagnostics for properties missing from the schema."
+        },
+        "jsonSchemaHelper.enableDiagnostics": {
+          "type": "boolean",
+          "default": true,
+          "description": "Report schema mismatches in the Problems panel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^5.3.3"
+  }
+}
